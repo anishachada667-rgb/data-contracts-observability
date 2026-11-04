@@ -1,0 +1,32 @@
+dataset: source.orders
+version: 1
+owner: retail-data-team
+
+freshness:
+  timestamp_column: loaded_at
+  max_age_minutes: 60
+
+columns:
+  order_id:
+    type: bigint
+    nullable: false
+
+  customer_id:
+    type: bigint
+    nullable: false
+
+  order_status:
+    type: character varying
+    nullable: false
+
+  order_amount:
+    type: numeric
+    nullable: false
+
+  created_at:
+    type: timestamp with time zone
+    nullable: false
+
+  loaded_at:
+    type: timestamp with time zone
+    nullable: false
