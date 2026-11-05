@@ -61,6 +61,20 @@ monitoring will be implemented later.
 
 ![Day 3 dbt build](screenshots/day3_dbt_build_success.png)
 
-## Next step
+### Day 4: Data quality and freshness monitoring
 
-Day 4: Add data quality checks and monitoring for freshness, volume, and null rates.
+- Added a manual monitoring script using Great Expectations.
+- Checked total order volume against a fixed range of 900–1,100 rows.
+- Checked customer IDs for null values.
+- Compared the latest load time with the 60-minute freshness threshold
+  in the YAML contract.
+- Tested fresh, stale, low-volume, and null-spike scenarios using
+  in-memory copies of synthetic data.
+- Verified that the earlier sample data was detected as stale.
+
+The checks currently run manually. Scheduling and Slack alerts are
+planned for later.
+
+![Passing monitoring check](screenshots/day4_monitoring_pass.png)
+
+![Low-volume monitoring check](screenshots/day4_monitoring_scenarios.png)
