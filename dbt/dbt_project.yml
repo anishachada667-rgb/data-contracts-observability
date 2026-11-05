@@ -1,0 +1,12 @@
+name: contracts_observability
+version: '1.0.0'
+config-version: 2
+
+profile: contracts_observability
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  contracts_observability:
+    +materialized: view

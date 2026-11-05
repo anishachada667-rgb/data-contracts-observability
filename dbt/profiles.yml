@@ -1,0 +1,12 @@
+contracts_observability:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: 127.0.0.1
+      port: 55432
+      user: contract_user
+      password: "{{ env_var('DBT_POSTGRES_PASSWORD', 'local_demo_password') }}"
+      dbname: contracts_demo
+      schema: analytics
+      threads: 2

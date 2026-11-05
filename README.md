@@ -50,6 +50,17 @@ monitoring will be implemented later.
 
 ![Day 2 contract validation](screenshots/day2_contract_validation.png)
 
+### Day 3: dbt models and data tests
+
+- Built a staging model that standardizes orders from PostgreSQL.
+- Added an enforced dbt model contract for the staging output.
+- Created a daily orders mart grouped by date and order status.
+- Added tests for unique order IDs, required fields, allowed statuses,
+  and non-negative order amounts.
+- Verified the staging model contains 1,000 unique orders.
+
+![Day 3 dbt build](screenshots/day3_dbt_build_success.png)
+
 ## Next step
 
-Day 3: Add dbt models, an enforced model contract, and data tests.
+Day 4: Add data quality checks and monitoring for freshness, volume, and null rates.
